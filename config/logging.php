@@ -101,5 +101,18 @@ return [
             'path' => storage_path('logs/laravel.log'),
         ],
     ],
+    'query' => [
+        'enabled' => env('LOG_QUERY', env('APP_ENV') === 'local'),
 
+        // 只记录比以下时间慢的查询
+        // 单位：毫秒
+        'slower_than' => 0,
+
+        // 仅在环境中设置 QUERY_LOG_TRIGGER 时记录查询，
+        // 或设置触发器 HEADER、GET、POST 或 COOKIE 变量时。
+        'trigger' => env('QUERY_LOG_TRIGGER'),
+
+        // 日志通道
+        'channel' => 'stack',
+    ],
 ];
