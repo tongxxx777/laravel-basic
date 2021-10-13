@@ -7,7 +7,7 @@
 2.安装composer 并配置代理加速
   composer config -g repo.packagist composer https://mirrors.aliyun.com/composer/
 
-3. 添加虚拟主机 和 SSL证书
+3.添加虚拟主机 和 SSL证书
 
 4.配置rewrite规则
   location / {
@@ -62,14 +62,14 @@
   php artisan make:controller Api/UserController
 
 创建 Service类
-touch app/Services/UserService.php
+  touch app/Services/UserService.php
 
 创建 验证类
-php artisan make:request Api/UserRequest
+  php artisan make:request Api/UserRequest
 
 创建 中间件
-php artisan make:middleware AcceptHeader
+  php artisan make:middleware AcceptHeader
 
 创建 服务
-php artisan make:provider UserServiceProvider
+  php artisan make:provider UserServiceProvider
 ```
