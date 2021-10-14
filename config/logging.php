@@ -100,6 +100,12 @@ return [
         'emergency' => [
             'path' => storage_path('logs/laravel.log'),
         ],
+
+        'production_stack' => [
+            'driver' => 'stack',
+            'tap' => [Freshbitsweb\LaravelLogEnhancer\LogEnhancer::class],
+            'channels' => ['daily', 'slack'],
+        ],
     ],
     'query' => [
         'enabled' => env('LOG_QUERY', env('APP_ENV') === 'local'),
