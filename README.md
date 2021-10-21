@@ -53,7 +53,7 @@
 2.3 有是否含义的字段 使用 0 1 表示
   例: $table->unsignedTinyInteger('is_disabled')->default(0)->comment('是否禁用 0.未禁用 1.已禁用');
 ```
-##### 常用命名
+##### Artisan 命令
 ```
 创建 Model 数据库迁移文件
   php artisan make:model User -mf
