@@ -104,7 +104,7 @@ return [
         'production_stack' => [
             'driver' => 'stack',
             'tap' => [Freshbitsweb\LaravelLogEnhancer\LogEnhancer::class],
-            'channels' => ['daily', 'slack'],
+            'channels' => ['daily', 'single']
         ],
     ],
     'query' => [
@@ -119,6 +119,6 @@ return [
         'trigger' => env('QUERY_LOG_TRIGGER'),
 
         // 日志通道
-        'channel' => 'stack',
+        'channel' => 'production_stack',
     ],
 ];
